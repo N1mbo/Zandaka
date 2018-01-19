@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
+import fightArea from './fightArea';
 
 class App extends Component {
   render() {
-    return (
-      <canvas></canvas>
-    );
+    return <fightArea/>;
   }
 }
 
