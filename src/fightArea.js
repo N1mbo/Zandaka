@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-function fightArea() {
-  
+class fightArea extends Component() {
+
 }
 
 export default fightArea;
