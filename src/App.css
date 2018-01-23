@@ -1,1 +1,40 @@
+.boardFightArea {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  width: 900px;
+  height: 600px;
+}
 
+.topBar {
+  height: 50px;
+  background-color: grey;
+}
+
+.fight {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.player {
+  width: 200px;
+  height: 200px;
+  border: solid;
+  margin: 25px;
+}
+
+.enemy {
+  width: 200px;
+  height: 200px;
+  border: solid;
+  margin: 25px;
+  margin-left: 300px;
+}
+
+.bottom {
+  height: 300px;
+}
+.ability {
+
+}

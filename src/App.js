@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import fightArea from './files/fightArea';
+import FightArea from './files/FightArea';
 
 class App extends Component {
   render() {
-    return <fightArea/>;
+    return <FightArea name="lol" />;
   }
 }
 
