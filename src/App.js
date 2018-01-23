@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import fightArea from './fightArea';
+import fightArea from './files/fightArea';
 
 class App extends Component {
   render() {
