@@ -1,0 +1,33 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+    config.vm.box = "ubuntu/xenial64"
+
+    config.vm.define "foo1" do |foo1|
+        foo1.vm.network "forwarded_port", guest: 22, host: 4441, id: "ssh"
+        foo1.vm.hostname = "foo1"
+
+        foo1.vm.provision "shell", inline: <<-SHELL
+            apt-get update
+            apt-get install -y python
+        SHELL
+    end
+
+    config.vm.define "foo2" do |foo2|
+        foo2.vm.network "forwarded_port", guest: 22, host: 4442, id: "ssh"
+        foo2.vm.hostname = "foo2"
+        
+        foo2.vm.provision "shell", inline: <<-SHELL
+            apt-get update
+            apt-get install -y python
+        SHELL
+    end
+
+    config.vm.define "bar1" do |bar1|
+        bar1.vm.box = "centos/7"
+        bar1.vm.network "forwarded_port", guest: 22, host: 4443, id: "ssh"
+        bar1.vm.network "forwarded_port", guest: 8080, host: 7980 
+        bar1.vm.hostname = "bar1"
+    end
+end
